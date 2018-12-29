@@ -28,28 +28,6 @@ finish-args:
   # OpenGL access
   - --device=dri
 modules:
-  - shared-modules/glu/glu-9.0.0.json
-  - wxwidgets.yaml
-  # for maxima
-  - gnuplot.yaml
-  # for maxima
-  - rlwrap.yaml
-  # for gc
-  - libatomic_ops.yaml
-  # for ecl
-  - gc.yaml
-  # Lisp
-  # for maxima
-  # Alternatives:
-  # - SBCL (2018, requires different bootstrap for each arch)
-  # - GCL (2014, requires many patches)
-  # - CLISP (2018, no stable release since 2010, continuous beta)
-  - ecl.yaml
-  - maxima.yaml
-  # for wxMaxima
-  - jsmath-fonts.yaml
-  - graphviz.yaml
-  - doxygen.yaml
   - wxMaxima.yaml
 cleanup:
   - /include

@@ -64,3 +64,5 @@ post-install:
   - install -p -D -m 0644 "COPYING" "LICENSE" -t "${FLATPAK_DEST}/share/licenses/ecl/";
 cleanup:
   - /bin/ecl-config
+modules:
+  - gc.yaml

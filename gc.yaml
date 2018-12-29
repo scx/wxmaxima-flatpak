@@ -24,3 +24,5 @@ sources:
     commands:
       - cp -p /usr/share/automake-*/config.{sub,guess} .;
       - autoreconf -vfi;
+modules:
+  - libatomic_ops.yaml

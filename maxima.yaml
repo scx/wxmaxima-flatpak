@@ -22,3 +22,12 @@ sources:
       - autoreconf -vfi;
 post-install:
   - install -p -D -m 0644 "COPYING" -t "${FLATPAK_DEST}/share/licenses/maxima/";
+modules:
+  - gnuplot.yaml
+  - rlwrap.yaml
+  # Lisp
+  # alternatives:
+  # - SBCL (2018, requires different bootstrap for each arch)
+  # - GCL (2014, requires many patches)
+  # - CLISP (2018, no stable release since 2010, continuous beta)
+  - ecl.yaml

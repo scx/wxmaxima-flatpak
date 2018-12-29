@@ -29,3 +29,5 @@ cleanup:
   - /bin
   - /lib/wx
   - /share/bakefile
+modules:
+  - shared-modules/glu/glu-9.0.0.json
