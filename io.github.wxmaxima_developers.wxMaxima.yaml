@@ -1,0 +1,60 @@
+app-id: io.github.wxmaxima_developers.wxMaxima
+runtime: org.gnome.Platform
+runtime-version: '3.30'
+sdk: org.gnome.Sdk
+command: wxmaxima
+rename-appdata-file: wxMaxima.appdata.xml
+rename-desktop-file: wxMaxima.desktop
+rename-icon: wxmaxima
+copy-icon: true
+finish-args:
+  # X11 + XShm access
+  - --share=ipc
+  - --socket=x11
+  # Wayland access
+  - --socket=wayland
+  # Network access
+  # for update checker
+  - --share=network
+  # Persist
+  - --persist=.maxima
+  # Filesystem access
+  - --filesystem=host
+  # Dconf access
+  - --filesystem=xdg-run/dconf
+  - --filesystem=~/.config/dconf:ro
+  - --talk-name=ca.desrt.dconf
+  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
+  # OpenGL access
+  - --device=dri
+modules:
+  - shared-modules/glu/glu-9.0.0.json
+  - wxwidgets.yaml
+  # for maxima
+  - gnuplot.yaml
+  # for maxima
+  - rlwrap.yaml
+  # for gc
+  - libatomic_ops.yaml
+  # for ecl
+  - gc.yaml
+  # Lisp
+  # for maxima
+  # Alternatives:
+  # - SBCL (2018, requires different bootstrap for each arch)
+  # - GCL (2014, requires many patches)
+  # - CLISP (2018, no stable release since 2010, continuous beta)
+  - ecl.yaml
+  - maxima.yaml
+  # for wxMaxima
+  - jsmath-fonts.yaml
+  - graphviz.yaml
+  - doxygen.yaml
+  - wxMaxima.yaml
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/bash-completion
+  - /share/man
+  - '*.a'
+  - '*.la'
