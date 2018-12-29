@@ -84,11 +84,11 @@ $ flatpak-builder --repo="repo" --force-clean "build" "io.github.wxmaxima_develo
 ```
 
 ```
-$ flatpak --user remote-add --no-gpg-verify "wxmaxima" "repo"
+$ flatpak --user remote-add --no-gpg-verify "wxmaxima-wxgtk2" "repo"
 ```
 
 ```
-$ flatpak --user install "wxmaxima" "io.github.wxmaxima_developers.wxMaxima"
+$ flatpak --user install "wxmaxima-wxgtk2" "io.github.wxmaxima_developers.wxMaxima"
 ```
 
 ### Run
@@ -104,7 +104,7 @@ $ flatpak --user uninstall "io.github.wxmaxima_developers.wxMaxima"
 ```
 
 ```
-$ flatpak --user remote-delete "wxmaxima"
+$ flatpak --user remote-delete "wxmaxima-wxgtk2"
 ```
 
 See also: [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-build.html)
