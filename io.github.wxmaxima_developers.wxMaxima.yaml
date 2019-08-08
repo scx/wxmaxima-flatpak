@@ -7,8 +7,6 @@ finish-args:
   # X11 + XShm access
   - --share=ipc
   - --socket=x11
-  # Wayland access
-  - --socket=wayland
   # Network access
   # for update checker
   - --share=network

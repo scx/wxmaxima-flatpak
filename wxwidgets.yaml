@@ -7,7 +7,7 @@ config-opts:
   - --enable-display
   - --enable-propgrid
   - --enable-stc
-  - --with-gtk=3
+  - --with-gtk=2
   - --with-opengl
   - --with-libjpeg
   - --with-libpng
@@ -30,4 +30,5 @@ cleanup:
   - /lib/wx
   - /share/bakefile
 modules:
+  - shared-modules/gtk2/gtk2.json
   - shared-modules/glu/glu-9.0.0.json
