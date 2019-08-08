@@ -51,6 +51,8 @@ $ flatpak install "flathub" "org.gnome.Sdk//3.32"
 $ flatpak install "flathub" "org.gnome.Platform//3.32"
 ```
 
+Clone this repository, then checkout the right branch.
+
 ```
 $ git submodule init
 ```
@@ -77,11 +79,13 @@ $ flatpak-builder --run "build" "io.github.wxmaxima_developers.wxMaxima.yaml" "s
 $ flatpak-builder --run "build" "io.github.wxmaxima_developers.wxMaxima.yaml" "wxmaxima"
 ```
 
-### Install
+### Create repo
 
 ```
 $ flatpak-builder --repo="repo" --force-clean "build" "io.github.wxmaxima_developers.wxMaxima.yaml"
 ```
+
+### Install
 
 ```
 $ flatpak --user remote-add --no-gpg-verify "wxmaxima-wxwidgets3.1" "repo"
@@ -107,7 +111,23 @@ $ flatpak --user uninstall "io.github.wxmaxima_developers.wxMaxima"
 $ flatpak --user remote-delete "wxmaxima-wxwidgets3.1"
 ```
 
-See also: [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-build.html)
+### Build single-file bundle
+
+```
+$ flatpak build-bundle "repo" "wxmaxima-wxwidgets3.1.flatpak" "io.github.wxmaxima_developers.wxMaxima" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+```
+
+### Install single-file bundle
+
+If you have already [installed](#install) the package, you have to [uninstall](#uninstall) it before continuing.
+
+```
+$ flatpak --user install "wxmaxima-wxwidgets3.1.flatpak"
+```
+
+See also:
+* [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-build.html)
+* [Single-file bundles](http://docs.flatpak.org/en/latest/single-file-bundles.html#single-file-bundles)
 
 ## FAQ
 
