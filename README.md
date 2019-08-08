@@ -88,11 +88,11 @@ $ flatpak-builder --repo="repo" --force-clean "build" "io.github.wxmaxima_develo
 ### Install
 
 ```
-$ flatpak --user remote-add --no-gpg-verify "wxmaxima" "repo"
+$ flatpak --user remote-add --no-gpg-verify "wxmaxima-wxgtk3" "repo"
 ```
 
 ```
-$ flatpak --user install "wxmaxima" "io.github.wxmaxima_developers.wxMaxima"
+$ flatpak --user install "wxmaxima-wxgtk3" "io.github.wxmaxima_developers.wxMaxima"
 ```
 
 ### Run
@@ -108,13 +108,13 @@ $ flatpak --user uninstall "io.github.wxmaxima_developers.wxMaxima"
 ```
 
 ```
-$ flatpak --user remote-delete "wxmaxima"
+$ flatpak --user remote-delete "wxmaxima-wxgtk3"
 ```
 
 ### Build single-file bundle
 
 ```
-$ flatpak build-bundle "repo" "wxmaxima.flatpak" "io.github.wxmaxima_developers.wxMaxima" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+$ flatpak build-bundle "repo" "wxmaxima-wxgtk3.flatpak" "io.github.wxmaxima_developers.wxMaxima" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
 ```
 
 ### Install single-file bundle
@@ -122,7 +122,7 @@ $ flatpak build-bundle "repo" "wxmaxima.flatpak" "io.github.wxmaxima_developers.
 If you have already [installed](#install) the package, you have to [uninstall](#uninstall) it before continuing.
 
 ```
-$ flatpak --user install "wxmaxima.flatpak"
+$ flatpak --user install "wxmaxima-wxgtk3.flatpak"
 ```
 
 See also:
