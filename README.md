@@ -114,7 +114,7 @@ $ flatpak --user remote-delete "wxmaxima-wxwidgets3.1"
 ### Build single-file bundle
 
 ```
-$ flatpak build-bundle "repo" "wxmaxima-wxwidgets3.1.flatpak" "io.github.wxmaxima_developers.wxMaxima" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+$ flatpak build-bundle "repo" "wxmaxima.flatpak" "io.github.wxmaxima_developers.wxMaxima" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
 ```
 
 ### Install single-file bundle
@@ -122,7 +122,7 @@ $ flatpak build-bundle "repo" "wxmaxima-wxwidgets3.1.flatpak" "io.github.wxmaxim
 If you have already [installed](#install) the package, you have to [uninstall](#uninstall) it before continuing.
 
 ```
-$ flatpak --user install "wxmaxima-wxwidgets3.1.flatpak"
+$ flatpak --user install "wxmaxima.flatpak"
 ```
 
 See also:
