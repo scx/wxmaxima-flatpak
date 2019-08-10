@@ -114,7 +114,7 @@ $ flatpak --user remote-delete "wxmaxima-wxgtk2"
 ### Build single-file bundle
 
 ```
-$ flatpak build-bundle "repo" "wxmaxima-wxgtk2.flatpak" "io.github.wxmaxima_developers.wxMaxima" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+$ flatpak build-bundle "repo" "wxmaxima.flatpak" "io.github.wxmaxima_developers.wxMaxima" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
 ```
 
 ### Install single-file bundle
@@ -122,7 +122,7 @@ $ flatpak build-bundle "repo" "wxmaxima-wxgtk2.flatpak" "io.github.wxmaxima_deve
 If you have already [installed](#install) the package, you have to [uninstall](#uninstall) it before continuing.
 
 ```
-$ flatpak --user install "wxmaxima-wxgtk2.flatpak"
+$ flatpak --user install "wxmaxima.flatpak"
 ```
 
 See also:
